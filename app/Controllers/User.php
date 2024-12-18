@@ -11,7 +11,7 @@ class User extends BaseController
         $model = new ItemModel();
 
         // Truncate the tmpRFID table
-        $model->truncateTable('tmpRFID');
+        $model->truncateTable('tmprfid');
 
         $data['title'] = 'Dashboard';
         $data['sidebarData'] = 'dashboard';
