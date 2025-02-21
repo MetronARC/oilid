@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?= base_url(); ?>css/style.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>css/style2.css">
     <script type="text/javascript" src="<?= base_url(); ?>jquery/jquery.min.js"></script>
     <title><?= $title ?></title>
 </head>

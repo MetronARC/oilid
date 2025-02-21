@@ -13,7 +13,7 @@
             <span class="lni lni-grid-alt"></span>
             <h3>Dashboard</h3>
         </a>
-        <a href="<?= base_url('record'); ?>" class="<?= ($sidebarData == "record") ? 'active' : 'inactive' ?>">
+        <a href="<?= base_url('user/record'); ?>" class="<?= ($sidebarData == "record") ? 'active' : 'inactive' ?>">
             <span class="fa-regular fa-clipboard"></span>
             <h3>Records</h3>
         </a>
