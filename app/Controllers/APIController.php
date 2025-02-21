@@ -149,4 +149,54 @@ class APIController extends ResourceController
             return $this->response->setStatusCode(404)->setBody("No records updated. MachineID may not exist.");
         }
     }
+
+    public function updateWeldID()
+    {
+        // Get the incoming request data
+        $machineID = $this->request->getGet('MachineID');
+        $apiKey = $this->request->getGet('apiKey');
+
+        // Validate the API key
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(403)->setBody("API key invalid.");
+        }
+
+        // Load the database connection
+        $db = \Config\Database::connect();
+
+        // Fetch the row with the largest WeldID value for the specified MachineID
+        $builder = $db->table('machine');
+        $builder->selectMax('WeldID');
+        $builder->where('MachineID', $machineID);
+        $query = $builder->get();
+
+        if ($query->getNumRows() > 0) {
+            // Fetch the result as an array
+            $row = $query->getRowArray();
+            $maxWeldID = $row['WeldID'];
+            $newWeldID = $maxWeldID + 1;
+
+            // Output the new WeldID value
+            echo $machineID . '.' . $newWeldID;
+
+            // Update the WeldID in the machine table
+            $updateBuilder = $db->table('machine');
+            $updateData = [
+                'WeldID' => $newWeldID
+            ];
+
+            $updateBuilder->where('MachineID', $machineID);
+            if ($updateBuilder->update($updateData)) {
+                // Successful update, you can handle any success response here
+            } else {
+                // Handle the error during the update
+                echo "Error updating WeldID.";
+            }
+        } else {
+            echo "No records found for MachineID " . $machineID;
+        }
+
+        // Close the database connection
+        $db->close();
+    }
 }
