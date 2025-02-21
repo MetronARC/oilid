@@ -6,6 +6,8 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('auth/login');
+        $data['title'] = 'Dashboard';
+        $data['sidebarData'] = 'dashboard';
+        return view('user/index', $data);
     }
 }

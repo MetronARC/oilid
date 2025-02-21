@@ -9,11 +9,11 @@
         </div>
         <div class="profile">
             <div class="info">
-                <p>Hey, <b>Metronarc</b></p>
+                <p>Hey, <b>OILid</b></p>
                 <small class="text-muted">Admin</small>
             </div>
             <div class="profile-photo">
-                <a href="Machine/Machine.php"><img src="<?= base_url(); ?>img/Logo.png" alt="AdminLogo"></a>
+                <a href="Machine/Machine.php"><img src="<?= base_url(); ?>img/favicon.png" alt="AdminLogo"></a>
             </div>
         </div>
     </div>
