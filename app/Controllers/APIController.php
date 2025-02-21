@@ -104,4 +104,49 @@ class APIController extends ResourceController
 
         return $this->response->setStatusCode(400)->setBody("Invalid scan status.");
     }
+
+    public function handleRFID()
+    {
+        $status = $this->request->getGet('Status');
+        $machineID = $this->request->getGet('machineID');
+        $area = $this->request->getGet('Area');
+        $jobData = $this->request->getGet('jobData');
+        $weldMetalData = $this->request->getGet('weldMetalData');
+        $userRFIDData = $this->request->getGet('userRFIDData');
+        $apiKey = $this->request->getGet('apiKey');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(403)->setBody("API key invalid.");
+        }
+
+        if (!in_array($area, ["1", "2", "3", "4", "5"])) {
+            return $this->response->setStatusCode(400)->setBody("Invalid area!");
+        }
+
+        $areaTable = 'area' . $area;
+        $db = \Config\Database::connect();
+        $builder = $db->table($areaTable);
+
+        switch ($status) {
+            case "jobScan":
+                $updateData = ['jobRFID' => $jobData];
+                break;
+            case "weldMetalScan":
+                $updateData = ['weldMetalRFID' => $weldMetalData];
+                break;
+            case "userScan":
+                $updateData = ['userRFID' => $userRFIDData];
+                break;
+            default:
+                return $this->response->setStatusCode(400)->setBody("Invalid status!");
+        }
+
+        $builder->where('MachineID', $machineID)->update($updateData);
+
+        if ($db->affectedRows() > 0) {
+            return $this->response->setStatusCode(200)->setBody("Update successful.");
+        } else {
+            return $this->response->setStatusCode(404)->setBody("No records updated. MachineID may not exist.");
+        }
+    }
 }
