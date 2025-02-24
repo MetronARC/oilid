@@ -149,3 +149,25 @@ class User extends BaseController
         return $this->response->setJSON($items);
     }
 }
+
+// SELECT 
+//     a.jobRFID,
+//     j.jobRFID,
+//     j.jobNumber,
+//     j.jobName,
+//     j.jobDescription,
+//     a.weldMetalRFID,
+//     w.weldMetalRFID,
+//     w.weldMetalNumber,
+//     w.weldMetalName,
+//     w.weldMetalCertNumber,
+//     w.weldMetalDescription,
+//     a.userRFID,
+//     e.cardUID,
+//     e.Name
+// FROM area1 AS a
+// LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+// LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+// LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+// WHERE a.MachineID = "MACHINE-1"
+// LIMIT 25;
