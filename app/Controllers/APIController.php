@@ -506,7 +506,7 @@ class APIController extends BaseController
     public function handleRFID()
     {
         $status = $this->request->getGet('Status');
-        $machineID = $this->request->getGet('machineID');
+        $machineID = $this->request->getGet('MachineID');
         $area = $this->request->getGet('Area');
         $jobData = $this->request->getGet('jobData');
         $weldMetalData = $this->request->getGet('weldMetalData');
