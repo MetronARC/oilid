@@ -36,12 +36,27 @@
                 machineStatesContainer.empty(); // Clear existing spans
 
                 data.forEach(function(machine) {
-                    const stateColor = machine.State === 'ON' ? 'green' : (machine.State === 'IDLE' ? 'yellow' : 'red');
+                    let stateColor;
+                    switch (machine.State) {
+                        case 'ON':
+                            stateColor = 'green';
+                            break;
+                        case 'IDLE':
+                            stateColor = 'yellow';
+                            break;
+                        case 'INSPECT':
+                            stateColor = 'orange';
+                            break;
+                        default:
+                            stateColor = 'gray';
+                    }
+
                     machineStatesContainer.append('<span class="material-symbols-outlined" style="background: ' + stateColor + '; width: 30px; height: 30px; margin-right: 15px"></span>');
                 });
             }
         });
     }
+
 
     // Call fetchMachineStates every second for each area
     setInterval(function() {
