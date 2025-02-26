@@ -472,7 +472,7 @@ class APIController extends BaseController
 
         // Load the database service
         $db = \Config\Database::connect();
-        $builder = $db->table('tmpData');
+        $builder = $db->table('tmpdata');
 
         // Prepare update data
         $updateData = [];
