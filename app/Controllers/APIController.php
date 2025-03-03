@@ -535,6 +535,8 @@ class APIController extends BaseController
             case "userScan":
                 $updateData = ['userRFID' => $userRFIDData];
                 break;
+            case "rfidDone";
+                $updateData = ['State' => 'INSPECT'];
             default:
                 return $this->response->setStatusCode(400)->setBody("Invalid status!");
         }
