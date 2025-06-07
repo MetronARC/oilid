@@ -76,7 +76,8 @@ class Contact extends Controller
             'newline' => "\r\n",
             'validate' => true,
             'wordWrap' => true,
-            'SMTPTimeout' => 30
+            'SMTPTimeout' => 30,
+            'mailPath' => '/usr/sbin/sendmail' // Add cPanel sendmail path
         ];
 
         try {
@@ -111,7 +112,8 @@ class Contact extends Controller
             $emailService->clear();
 
             // 2. Send auto-reply email to user
-            $emailService->setFrom('no-reply@oilid.com', 'OILid');
+            $emailService->setFrom('no-reply@oilid.com', 'OILid Support');
+            $emailService->setReplyTo('no-reply@oilid.com', 'OILid Support');
             $emailService->setTo($userEmail);
             $emailService->setSubject('[No Reply] Email Successfully Received');
             
@@ -120,7 +122,7 @@ class Contact extends Controller
                 <p>Hello {$name},</p>
                 <p>Thank you for reaching out. This is an automated message to confirm that we have successfully received your email.</p>
                 <p>We will get back to you as soon as possible.</p>
-                <p>Best regards,<br>OILid Team</p>
+                <p>Best regards,<br>OILid Support Team</p>
             ";
             
             $emailService->setMessage($autoReplyMessage);

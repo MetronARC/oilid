@@ -203,7 +203,7 @@
                 OILid combines RFID and IoT to give you unmatched visibility, control, and insight across your operations
               </p>
               <div class="button-wrapper">
-                <a class="btn" href="services.html"><span>Contact Us</span></a>
+                <a class="btn" href="#contact"><span>Contact Us</span></a>
               </div>
             </div>
           </div>
