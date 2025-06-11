@@ -23,9 +23,9 @@
               </div>
             </div>
 
-            <h1 class="hero-title mb-4 text-white">RFID Equipment Tagging and Workflow Management for Marine, Offshore, and Heavy Lift Industries</h1>
+            <h1 class="hero-title mb-4 text-white">Asset Management and Inspection Verification for Marine, Offshore, and Heavy Lift Industries</h1>
 
-            <p class="hero-description mb-4 text-white">RFID tagging and workflow management for efficient, safe, and traceable operations in the marine, offshore, and heavy lift industries.</p>
+            <p class="hero-description mb-4 text-white">Ensure safety, compliance, and efficiency with trusted inspection and asset tracking solutions</p>
 
             <div class="cta-wrapper">
               <a href="https://demo.oilid.com" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Launch Demo<i class="bi bi-box-arrow-up-right ms-2"></i></a>
@@ -45,7 +45,7 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p class="who-we-are">Who We Are</p>
-            <h3>Track. Inspect. Trust. RFID for heavy oil lifting gear</h3>
+            <h3>Track. Inspect. Trust. Asset Management for heavy oil lifting gear</h3>
             <p class="fst-italic">
               We provide RFID-based asset tracking for heavy oil lifting gear, seamlessly integrating complete inspection histories and inspector records for smarter, safer operations.
             </p>
@@ -200,7 +200,7 @@
               <h6 class="subtitle">Our innovative services</h6>
               <h2 class="title">Transform the Way You Track and Manage Lifting Equipment</h2>
               <p class="description">
-                OILid combines RFID and IoT to give you unmatched visibility, control, and insight across your operations
+                OILID combines RFID and IoT to give you unmatched visibility, control, and insight across your operations
               </p>
               <div class="button-wrapper">
                 <a class="btn" href="#contact"><span>Contact Us</span></a>
@@ -214,7 +214,7 @@
                   <i class="bi bi-code-square"></i>
                 </div>
                 <div class="service-content">
-                  <h4><a href="service-details.html">Real-time visibility with RFID + IoT</a></h4>
+                  <h4><a href="" style="cursor: default;">Real-time visibility with RFID + IoT</a></h4>
                   <p>Know exactly where your lifting gear is—anytime, anywhere. No more guesswork, just instant, accurate tracking.</p>
                 </div>
               </div><!-- End Service Item -->
@@ -224,7 +224,7 @@
                   <i class="bi bi-graph-up"></i>
                 </div>
                 <div class="service-content">
-                  <h4><a href="service-details.html">Smarter, faster field operations</a></h4>
+                  <h4><a href="" style="cursor: default;">Smarter, faster field operations</a></h4>
                   <p>Speed up response times and reduce human error with automated data capture and streamlined workflows.</p>
                 </div>
               </div><!-- End Service Item -->
@@ -234,7 +234,7 @@
                   <i class="bi bi-phone"></i>
                 </div>
                 <div class="service-content">
-                  <h4><a href="service-details.html">Full inspection history at your fingertips</a></h4>
+                  <h4><a href="" style="cursor: default;">Full inspection history at your fingertips</a></h4>
                   <p>Access complete inspection records and inspector logs in seconds—boosting compliance and confidence.</p>
                 </div>
               </div><!-- End Service Item -->
@@ -244,7 +244,7 @@
                   <i class="bi bi-gear"></i>
                 </div>
                 <div class="service-content">
-                  <h4><a href="service-details.html">Lower costs, tighter control</a></h4>
+                  <h4><a href="" style="cursor: default;">Lower costs, tighter control</a></h4>
                   <p>Cut storage overhead and gain better control over asset utilization and credit lines with data-driven insights.</p>
                 </div>
               </div><!-- End Service Item -->
