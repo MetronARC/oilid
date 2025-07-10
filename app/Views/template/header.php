@@ -2,7 +2,7 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="<?= base_url('assets/images/oilid.png') ?>" alt="">
+        <img src="<?= base_url('assets/images/oilid-new.png') ?>" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
